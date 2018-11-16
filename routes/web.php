@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'home')->name('home');
+
+Route::resource('doc', 'DocumentController')->only([
+    'index', 'store', 'show'
+]);
+
+Route::post('timezone', 'TimezoneController')->name('timezone');
