@@ -17,7 +17,7 @@ class CreateDocumentsTable extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->string('sha256', 64)->unique()->index();
-            $table->integer('size');
+            $table->bigInteger('size')->unsigned();
             $table->timestamps();
         });
     }

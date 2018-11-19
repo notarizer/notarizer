@@ -22,7 +22,9 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        return redirect()->route('home');
+        $documents = Document::all();
+
+        return view('doc.index', compact('documents'));
     }
 
     /**
@@ -35,16 +37,26 @@ class DocumentController extends Controller
     {
         $data = $request->validate([
             'name'   => 'required|string|max:255',
-            'sha256' => 'required|string|max:64',
-            'size'   => 'required|numeric|min:0|digits_between:0,255',
+            'sha256' => 'required|string|size:64|alpha_num',
+            'size'   => 'required|integer|min:0|max:' . PHP_INT_MAX,
+            'compare_to' => 'string|size:64|alpha_num'
         ]);
+
+        if (! empty($data['compare_to'])) {
+            $request->session()->flash('confirmation', $data['compare_to'] == $data['sha256']);
+
+            return redirect()
+                ->route('doc.show', $data['compare_to']);
+        }
 
         $document = Document::firstOrCreate(
             ['sha256' => $data['sha256']],
             ['name' => $data['name'], 'size' => $data['size']]
         );
 
-        return redirect($document->path());
+        $request->session()->push('owners', $data['sha256']);
+
+        return redirect()->route('payments.create', ['for' => $data['sha256']]);
     }
 
     /**

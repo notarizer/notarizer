@@ -16,20 +16,35 @@ require('./bootstrap');
             // Prevent the form from submitting regularly
             e.preventDefault();
 
-            // Create a new worker which will be in charge of parsing the uploaded file
-            let worker = new Worker('/js/worker.js');
+            window.submitUpload(form, docElement);
 
-            let uploadedFile = docElement.files[0];
-
-            // Once the worker is done parsing the file, upload the data
-            worker.onmessage = function(e) {
-                postDoc(form, uploadedFile.name, e.data, uploadedFile.size);
-            };
-
-            // Tell the worker to start parsing the uploaded file
-            worker.postMessage(uploadedFile);
-
+            return false;
         });
+    }
+
+    window.submitUpload = function (form, docElement) {
+        if (docElement.files.length == 0)
+            return;
+
+        form.querySelector('.upload-status').innerHTML = 'Your file is processing...';
+        
+        // Create a new worker which will be in charge of parsing the uploaded file
+        let worker = new Worker('/js/worker.js');
+
+        let uploadedFile = docElement.files[0];
+
+        // Once the worker is done parsing the file, upload the data
+        worker.onmessage = function(e) {
+            postDoc(form, uploadedFile.name, e.data, uploadedFile.size);
+        };
+
+        // If something goes wrong, tell the user!
+        worker.onerror = function(e) {
+            form.querySelector('.upload-status').innerHTML = 'Whoops! Something went wrong: ' + e;
+        }
+
+        // Tell the worker to start parsing the uploaded file
+        worker.postMessage(uploadedFile);
     }
 
     // Post the document to the server
@@ -40,6 +55,19 @@ require('./bootstrap');
         form.querySelector('[name=size]').setAttribute('value', size);
 
         form.submit();
+    }
+
+    window.copyEl = function (element, button, originalText) {
+        element.select();
+        document.execCommand('copy');
+
+        originalText = originalText || button.innerHTML;
+
+        button.innerHTML = 'Copied!';
+
+        setTimeout((original, button) => {
+            button.innerHTML = originalText;
+        }, 2000, originalText, button);
     }
 
 }).call(this);

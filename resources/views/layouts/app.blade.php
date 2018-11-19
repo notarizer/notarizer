@@ -12,6 +12,12 @@
 <body>
     <div id="app">
         <h1><a href="{{ route('home') }}">Notarizer</a></h1>
+        
+        @if(session()->has('payment_confirmation'))
+            <div>
+                <p>{{ session('payment_confirmation') }}</p>
+            </div>
+        @endif
 
         @yield('content')
     </div>
