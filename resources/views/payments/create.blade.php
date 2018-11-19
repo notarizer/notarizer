@@ -41,42 +41,11 @@
     <script src="https://checkout.stripe.com/checkout.js"></script>
 
     <script>
-        var handler = StripeCheckout.configure({
-            key: '{{ config('services.stripe.key') }}',
-            locale: 'auto',
-            zipCode: true,
-            name: 'Notarizer',
-            description: 'One-time payment',
-            token: function(token) {
-                document.getElementById('stripeToken').value = token.id;
-                document.getElementById('email').value = token.email;
-                document.getElementById('paymentForm').submit();
-            }
-        });
-
-        document.getElementById('paymentForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            document.querySelector('.error_message').innerHTML = '';
-
-            let amount = document.querySelector('input[name=amount]').value;
-            amount = amount.replace(/\$/g, '').replace(/\,/g, '');
-
-            amount = parseFloat(amount);
-
-            if (isNaN(amount)) {
-                document.querySelector('.error_message').innerHTML = 'The amount you entered is not a number!';
-            } else if (amount < 1.00) {
-                document.querySelector('.error_message').innerHTML = 'The minimum donation amount is $1.00';
-            } else {
-                amount = amount * 100; // Convert from dollars to cents
-                handler.open({
-                    amount: Math.round(amount)
-                });
-            }
-
-
-
-        });
+        window.initPaymentForm(
+            document.getElementById('paymentForm'),
+            document.getElementById('stripeToken'),
+            document.getElementById('email'),
+            '{{ config('services.stripe.key') }}'
+        )
     </script>
 @endpush

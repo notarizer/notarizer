@@ -20,10 +20,10 @@ require('./bootstrap');
 
             return false;
         });
-    }
+    };
 
     window.submitUpload = function (form, docElement) {
-        if (docElement.files.length == 0)
+        if (docElement.files.length === 0)
             return;
 
         form.querySelector('.upload-status').innerHTML = 'Your file is processing...';
@@ -41,11 +41,11 @@ require('./bootstrap');
         // If something goes wrong, tell the user!
         worker.onerror = function(e) {
             form.querySelector('.upload-status').innerHTML = 'Whoops! Something went wrong: ' + e;
-        }
+        };
 
         // Tell the worker to start parsing the uploaded file
         worker.postMessage(uploadedFile);
-    }
+    };
 
     // Post the document to the server
     let postDoc = function (form, name, sha256, size) {
@@ -55,7 +55,7 @@ require('./bootstrap');
         form.querySelector('[name=size]').setAttribute('value', size);
 
         form.submit();
-    }
+    };
 
     window.copyEl = function (element, button, originalText) {
         element.select();
@@ -68,6 +68,43 @@ require('./bootstrap');
         setTimeout((original, button) => {
             button.innerHTML = originalText;
         }, 2000, originalText, button);
-    }
+    };
+
+    window.initPaymentForm = function (paymentForm, stripeToken, email, stripeKey) {
+        let handler = StripeCheckout.configure({
+            key: stripeKey,
+            locale: 'auto',
+            zipCode: true,
+            name: 'Notarizer',
+            description: 'One-time payment',
+            token: function(token) {
+                stripeToken.value = token.id;
+                email.value = token.email;
+                paymentForm.submit();
+            }
+        });
+
+        paymentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            paymentForm.querySelector('.error_message').innerHTML = '';
+
+            let amount = paymentForm.querySelector('input[name=amount]').value;
+            amount = amount.replace(/\$/g, '').replace(/,/g, '');
+
+            amount = parseFloat(amount);
+
+            if (isNaN(amount)) {
+                paymentForm.querySelector('.error_message').innerHTML = 'The amount you entered is not a number!';
+            } else if (amount < 1.00) {
+                paymentForm.querySelector('.error_message').innerHTML = 'The minimum donation amount is $1.00';
+            } else {
+                amount = amount * 100; // Convert from dollars to cents
+                handler.open({
+                    amount: Math.round(amount)
+                });
+            }
+        });
+    };
 
 }).call(this);
