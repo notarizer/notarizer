@@ -44,7 +44,14 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 */
 
 let colors = {
-  'transparent': 'transparent',
+    'transparent': 'transparent',
+
+    'primary-darker': '#600f19',
+    'primary-dark': '#a21a2b',
+    'primary': '#DD2B41',
+    'primary-light': '#e45768',
+    'primary-lighter': '#e86d7c',
+    'primary-lightest': '#f2afb7',
 
   'black': '#22292f',
   'grey-darkest': '#3d4852',
@@ -226,6 +233,11 @@ module.exports = {
       'Liberation Mono',
       'Courier New',
       'monospace',
+    ],
+    'heading' : [
+        'Impact',
+        'Charcoal',
+        'sans-serif'
     ],
   },
 
@@ -594,6 +606,7 @@ module.exports = {
   */
 
   maxWidth: {
+    '2xs': '10rem',
     'xs': '20rem',
     'sm': '30rem',
     'md': '40rem',
@@ -863,7 +876,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
+    backgroundColors: ['responsive', 'hover', 'focus', 'active'],
     backgroundPosition: ['responsive'],
     backgroundRepeat: ['responsive'],
     backgroundSize: ['responsive'],
@@ -896,7 +909,7 @@ module.exports = {
     pointerEvents: ['responsive'],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive', 'hover', 'focus'],
+    shadows: ['responsive', 'hover', 'focus', 'active'],
     svgFill: [],
     svgStroke: [],
     tableLayout: ['responsive'],

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="122px" viewBox="0 0 93 122" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#F2EEEE" offset="0%"></stop>
+            <stop stop-color="#CFCACA" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 0 64.8305085 0 85 20.2025316 85 114 0 114"></polygon>
+        <filter x="-8.2%" y="-4.4%" width="116.5%" height="112.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-674.000000, -1000.000000)">
+            <g id="Second-Marketing-thing" transform="translate(141.000000, 923.000000)">
+                <g id="Graphic" transform="translate(417.000000, 0.000000)">
+                    <g id="Document-Lock" transform="translate(120.000000, 79.000000)">
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                            <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,113.5 L84.5,113.5 L84.5,20.4093988 L64.623162,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                        </g>
+                        <polygon id="Triangle" fill="#FFFFFF" points="65 1.58966064 83.3825378 20 65 20"></polygon>
+                        <path d="M64.5,1.12179487 L64.5,20.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        <path d="M83.8782051,20.5 L65,20.5" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        <g id="Lock" transform="translate(16.000000, 31.000000)" stroke="#2D2C2C" stroke-width="8">
+                            <path d="M26.1679608,0 C33.2519412,-1.7847052e-15 40.3359216,3.95465981 40.3359216,15.3438633 C40.3359216,22.9366656 40.3359216,33.3220445 40.3359216,46.5 L12,46.5 C12,33.3192294 12,22.9338505 12,15.3438633 C12,3.95888249 19.0839804,9.679757e-16 26.1679608,0 Z" id="Polygon" fill="#D8D8D8"></path>
+                            <rect id="Rectangle" fill="#645E5E" x="4" y="22" width="45" height="27"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

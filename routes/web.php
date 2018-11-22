@@ -21,3 +21,8 @@ Route::post('timezone', 'TimezoneController')->name('timezone');
 
 Route::get('payment', 'PaymentsController@create')->name('payments.create');
 Route::post('payment', 'PaymentsController@store')->name('payments.store');
+
+Route::get('contact', 'ContactController@create')->name('contact.create');
+Route::get('contact/thanks', 'ContactController@thanks')->name('contact.thanks');
+
+Route::view('api-docs', 'api-docs')->name('api-docs');

@@ -4,7 +4,7 @@ onmessage = function(e) {
     // https://stackoverflow.com/questions/29731329/cryptojs-sha256-large-file-progressive-checksum
     // TODO: Clean up
 
-    let chunkSize = 1000000;
+    let chunkSize = 10000000;
 
     let sha256 = CryptoJS.algo.SHA256.create();
     let sha256Update;

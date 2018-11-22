@@ -67,12 +67,6 @@ class DocumentController extends Controller
      */
     public function show(Document $doc)
     {
-        // https://secure.php.net/manual/en/function.filesize.php#106569
-        $sz = 'BKMGTP';
-        $decimals = 2;
-        $factor = floor((strlen($doc->size) - 1) / 3);
-        $doc->humanSize = sprintf("%.{$decimals}f", $doc->size / pow(1024, $factor)) . @$sz[$factor];
-
         return view('doc.show', compact('doc'));
     }
 }

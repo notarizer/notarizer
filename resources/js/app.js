@@ -26,7 +26,11 @@ require('./bootstrap');
         if (docElement.files.length === 0)
             return;
 
-        form.querySelector('.upload-status').innerHTML = 'Your file is processing...';
+        form.querySelector('.js-errors').classList.add('hidden');
+        form.querySelector('.js-upload-status').innerHTML = 'Your file is processing...';
+        form.querySelector('.js-upload-status').classList.add('cursor-not-allowed');
+        preventPageChange(true);
+        docElement.disabled = true;
         
         // Create a new worker which will be in charge of parsing the uploaded file
         let worker = new Worker('/js/worker.js');
@@ -35,17 +39,30 @@ require('./bootstrap');
 
         // Once the worker is done parsing the file, upload the data
         worker.onmessage = function(e) {
+            preventPageChange(false);
             postDoc(form, uploadedFile.name, e.data, uploadedFile.size);
         };
 
         // If something goes wrong, tell the user!
         worker.onerror = function(e) {
-            form.querySelector('.upload-status').innerHTML = 'Whoops! Something went wrong: ' + e;
+            form.querySelector('.js-errors').classList.remove('hidden');
+            form.querySelector('.js-errors').innerHTML = 'Whoops! Something went wrong: ' + e;
+            form.querySelector('.js-upload-status').classList.remove('cursor-not-allowed');
+            docElement.disabled = false;
+            preventPageChange(false);
         };
 
         // Tell the worker to start parsing the uploaded file
         worker.postMessage(uploadedFile);
     };
+
+    let preventPageChange = function (prevent) {
+        if (prevent) {
+            window.onbeforeunload = () => { return 'Are you sure you want to leave? A file upload is in progress.' };
+        } else {
+            window.onbeforeunload = null;
+        }
+    }
 
     // Post the document to the server
     let postDoc = function (form, name, sha256, size) {
@@ -76,6 +93,7 @@ require('./bootstrap');
             locale: 'auto',
             zipCode: true,
             name: 'Notarizer',
+            image: '/img/payment-logo.png',
             description: 'One-time payment',
             token: function(token) {
                 stripeToken.value = token.id;
@@ -87,7 +105,8 @@ require('./bootstrap');
         paymentForm.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            paymentForm.querySelector('.error_message').innerHTML = '';
+            paymentForm.querySelector('.js-error-message').innerHTML = '';
+            paymentForm.querySelector('.js-error-message').classList.add('hidden');
 
             let amount = paymentForm.querySelector('input[name=amount]').value;
             amount = amount.replace(/\$/g, '').replace(/,/g, '');
@@ -95,9 +114,11 @@ require('./bootstrap');
             amount = parseFloat(amount);
 
             if (isNaN(amount)) {
-                paymentForm.querySelector('.error_message').innerHTML = 'The amount you entered is not a number!';
+                paymentForm.querySelector('.js-error-message').innerHTML = 'The amount you entered is not a number!';
+                paymentForm.querySelector('.js-error-message').classList.remove('hidden');
             } else if (amount < 1.00) {
-                paymentForm.querySelector('.error_message').innerHTML = 'The minimum donation amount is $1.00';
+                paymentForm.querySelector('.js-error-message').innerHTML = 'The minimum donation amount is $1.00';
+                paymentForm.querySelector('.js-error-message').classList.remove('hidden');
             } else {
                 amount = amount * 100; // Convert from dollars to cents
                 handler.open({

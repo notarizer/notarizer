@@ -1,5 +1,7 @@
 @extends('layouts/app')
 
+@section('title', 'All Documents')
+
 @section('content')
     <h2>Index of all documents</h2>
 
@@ -21,10 +23,9 @@
 
     <p>Once on the cached site, use your browser's "Find" function to search for a document.</p>
 
-    <table>
+    <table class="block whitespace-no-wrap">
         <tr>
             <th>Sha-256</th>
-            <th>File size (bytes)</th>
             <th>Creation date (UTC)</th>
         </tr>
         @foreach($documents as $document)

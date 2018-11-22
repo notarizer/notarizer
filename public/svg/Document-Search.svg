@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="228px" height="177px" viewBox="0 0 228 177" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#F2EEEE" offset="0%"></stop>
+            <stop stop-color="#CFCACA" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-4" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-6" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-8" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-9">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-10" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-12" points="0 0 45 0 59 14 59 79 0 79"></polygon>
+        <filter x="-11.9%" y="-6.3%" width="123.7%" height="117.7%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-14">
+            <stop stop-color="#EEEEEE" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#E3D9D9" stop-opacity="0.3" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-200.000000, -1369.000000)">
+            <g id="Third-Marketing-thing" transform="translate(141.000000, 1334.000000)">
+                <g id="Document-Search" transform="translate(63.000000, 37.000000)">
+                    <g id="Documents">
+                        <g id="Document-Copy" transform="translate(0.000000, 90.000000)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Document-Copy-3" transform="translate(70.000000, 90.000000)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Document-Copy-4" transform="translate(140.000000, 90.000000)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Document-Copy-7">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-8"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Document-Copy-6" transform="translate(70.000000, 0.000000)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Document-Copy-5" transform="translate(140.000000, 0.000000)">
+                            <g id="Rectangle">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                                <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
+                            </g>
+                            <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
+                            <path d="M45,1.08333333 L45,14" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path>
+                            <path d="M57.9166667,14 L45,14" id="Line-Copy" stroke="#4A4A4A" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                    <g id="Magnifying-glass" transform="translate(79.000000, 57.000000)" stroke="#4A4A4A" stroke-width="8">
+                        <circle id="Oval" fill="url(#radialGradient-14)" cx="35" cy="35" r="35"></circle>
+                        <path d="M66,54 L141,101" id="Line-2" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

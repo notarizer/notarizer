@@ -21,7 +21,9 @@ class PaymentsController extends Controller
     /**
      * Charge the payment in the database and charge the card
      *
-     * @return Illuminate\Http\Response
+     * @param \Illuminate\Http\Request
+     * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request)
     {
@@ -49,7 +51,7 @@ class PaymentsController extends Controller
         setlocale(LC_MONETARY, 'en_US.UTF-8');
         $formattedAmount = money_format('%.2n', $data['amount']);
 
-        session()->flash('payment_confirmation', "Thank you for your payment of {$formattedAmount}! We've emailed you a reciept to {$data['email']}");
+        session()->flash('payment_confirmation', "Thank you for your payment of {$formattedAmount}! We've emailed you a reciept to {$data['email']}.");
 
         if(empty($data['for']))
             return redirect()->route('home');
