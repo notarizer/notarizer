@@ -45,7 +45,6 @@ class PaymentsController extends Controller
                 'for' => $data['for'] ?? null
             ],
             'receipt_email' => $data['email'],
-            'statement_descriptor' => 'Notarizer one-time' // TODO: Add phone number
         ]);
 
         setlocale(LC_MONETARY, 'en_US.UTF-8');

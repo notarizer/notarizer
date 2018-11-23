@@ -23,7 +23,7 @@
 
         <div class="my-2">
             <label for="subject">Subject:</label>
-            <input class="border border-grey-dark rounded w-full p-2 mt-2" type="text" name="subject" placeholder="Subject" />
+            <input class="border border-grey-dark rounded w-full p-2 mt-2" type="text" name="subject" placeholder="Subject" value="{{ request()->input('subject') }}" />
         </div>
 
         <div class="my-2">

@@ -18,7 +18,7 @@
         <li><a href="https://www.google.com/search?q=site%3Anotarizer.app%2Fdoc">Google Cache</a> (Click the dropdown next to the website URL, then click "Cached")</li>
         <li><a href="https://bing.com/search?q=site%3Anotarizer.app%2Fdoc">Bing Cache</a> (Click the dropdown next to the website URL, then click "Cached")</li>
         <li><a href="#todo">archive.is</a></li>
-        <li>Have an archiving site? <a href="#todo-contact">Add it here!</a></li>
+        <li>Have an auditing service? <a href="{{ route('contact.create', ['subject' => 'I have an auditing service']) }}">Contact us to add it!</a></li>
     </ul>
 
     <p>Once on the cached site, use your browser's "Find" function to search for a document.</p>

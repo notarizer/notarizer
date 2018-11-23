@@ -57,7 +57,7 @@
         </div>
 
         <div class="md:w-1/2 w-full sm:w-2/3 mx-auto md:ml-8">
-            @include('components/doc-upload', ['form' => 'upload', 'doc' => 'doc', 'submitText' => 'Verify similarity', 'compareTo' => $doc->sha256])
+            @include('components/doc-upload', ['form' => 'upload', 'doc' => 'doc', 'submitText' => 'Verify this file', 'compareTo' => $doc->sha256])
         </div>
     </div>
 @endsection

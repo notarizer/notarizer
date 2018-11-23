@@ -39,12 +39,17 @@ require('./bootstrap');
 
         // Once the worker is done parsing the file, upload the data
         worker.onmessage = function(e) {
-            preventPageChange(false);
-            postDoc(form, uploadedFile.name, e.data, uploadedFile.size);
+            if (e.data.status === 'progress') {
+                form.querySelector('.js-upload-status').style.background = 'linear-gradient(to right, #dd2b41 ' + e.data.progress + '%, #e8b7bd ' + (e.data.progress + 1) + '%)';
+            } else if (e.data.status === 'done') {
+                preventPageChange(false);
+                postDoc(form, uploadedFile.name, e.data.result, uploadedFile.size);
+            }
         };
 
         // If something goes wrong, tell the user!
-        worker.onerror = function(e) {
+        worker.onerror = worker.onmessageerror = function(e) {
+            console.error(e);
             form.querySelector('.js-errors').classList.remove('hidden');
             form.querySelector('.js-errors').innerHTML = 'Whoops! Something went wrong: ' + e;
             form.querySelector('.js-upload-status').classList.remove('cursor-not-allowed');

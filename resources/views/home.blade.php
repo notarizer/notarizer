@@ -7,7 +7,7 @@
     <div class="flex flex-col sm:flex-row my-16">
         <div class="sm:w-1/2 sm:pr-5 sm:text-right mb-4 sm:mb-0">
             <h2 class="font-heading text-4xl">Save the Date</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa delectus illo inventore iste maiores, omnis praesentium vel voluptas voluptatem. Aliquid beatae, enim incidunt iusto labore nemo quasi quis rem?</p>
+            <p>Notarizer is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time. For example, Notarizer can be used to verify your school paper was complete before the deadline. <a href="#todo">See an example</a>!</p>
         </div>
         <div class="sm:w-1/2 sm:pl-5">
             @include('components/doc-upload', ['form' => 'upload', 'doc' => 'doc', 'submitText' => 'Upload a File'])
@@ -82,7 +82,7 @@
         </div>
         <div class="sm:w-1/2 p-4">
             <h3 class="font-heading text-2xl text-center mb-2">All Sizes Welcome</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta eius, eos eum eveniet ex ipsam labore laborum minus natus nisi nostrum placeat quia quod rerum sequi unde veniam vero!</p>
+            <p>There is no hard size limit on uploaded files, and since the files don't ever leave your device, you don't have to deal with bandwidth limits or email attachment size limits. No more waiting on slow uploads.</p>
         </div>
     </div>
 
@@ -127,7 +127,7 @@
         </div>
         <div class="sm:w-1/2 p-4">
             <h3 class="font-heading text-2xl text-center mb-2">Keep Documents Private</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta eius, eos eum eveniet ex ipsam labore laborum minus natus nisi nostrum placeat quia quod rerum sequi unde veniam vero!</p>
+            <p>Have peace of mind knowing your secrets are safe because they never leave your device. The only data uploaded to our service is the file name, file size, and the SHA-256 hash of the file.</p>
         </div>
     </div>
 
@@ -193,7 +193,7 @@
                                 <g id="Documents">
                                     <g id="Document-Copy" transform="translate(0.000000, 90.000000)">
                                         <g id="Rectangle">
-                                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-8"></use>
                                             <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
                                         </g>
                                         <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
@@ -211,7 +211,7 @@
                                     </g>
                                     <g id="Document-Copy-4" transform="translate(140.000000, 90.000000)">
                                         <g id="Rectangle">
-                                            <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                                            <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-8"></use>
                                             <path stroke="#4A4A4A" stroke-width="1" d="M0.5,0.5 L0.5,78.5 L58.5,78.5 L58.5,14.2071068 L44.7928932,0.5 L0.5,0.5 Z" stroke-linejoin="square" fill="url(#linearGradient-1)" fill-rule="evenodd"></path>
                                         </g>
                                         <polygon id="Triangle" fill="#FFFFFF" points="45.5049744 1.93133545 57.0471921 13.4964775 45.4827867 13.4964775"></polygon>
@@ -258,7 +258,7 @@
         </div>
         <div class="sm:w-1/2 p-4">
             <h3 class="font-heading text-2xl text-center mb-2">Trustworthy by Design</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta eius, eos eum eveniet ex ipsam labore laborum minus natus nisi nostrum placeat quia quod rerum sequi unde veniam vero!</p>
+            <p>Our service is designed to be trusted by auditing by many third parties. We have <a href="{{ route('doc.index') }}">a public list</a> of all files uploaded to our service, so you can audit it yourself. <br><em>Coming soon!</em> Advanced mode which removes the file upload, thereby increasing trust.</p>
         </div>
     </div>
 @endsection

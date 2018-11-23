@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    {{-- TODO: Show upload progress for larger files --}}
+    {{-- TODO: Add drag and drop --}}
 
     <noscript>
         <div class="error-box text-sm">
@@ -25,7 +25,7 @@
 
         <div class="js-errors hidden bg-red-light border border-red-dark text-red-darkest mb-3 p-2 text-sm shadow-inner"></div>
 
-        <label for="{{ $doc }}" class="js-upload-status shadow cursor-pointer rounded bg-primary w-full block text-white text-center p-4 text-xl font-thin tracking-wide border-primary border-4 active:shadow-lg active:bg-primary-dark">Upload a File*</label>
+        <label for="{{ $doc }}" class="js-upload-status shadow cursor-pointer rounded bg-primary w-full block text-white text-center p-4 text-xl font-thin tracking-wide border-primary border-4 active:shadow-lg active:bg-primary-dark">{{ $submitText }}*</label>
 
         <div class="text-xs tracking-wide text-center">*file never leaves your device</div>
 

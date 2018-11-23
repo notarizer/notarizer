@@ -17,7 +17,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/worker.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .tailwind()
-    .browserSync('notarizer.test')
+    // .browserSync('notarizer.test')
     .version();
 
 // Only run PurgeCSS during production builds for faster development builds
