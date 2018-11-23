@@ -98,7 +98,7 @@ require('./bootstrap');
             locale: 'auto',
             zipCode: true,
             name: 'Notarizer',
-            image: '/img/payment-logo.png',
+            image: '/img/Square Logo@2x.png',
             description: 'One-time payment',
             token: function(token) {
                 stripeToken.value = token.id;

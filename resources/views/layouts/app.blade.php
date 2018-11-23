@@ -6,6 +6,8 @@
 
     <title>@yield('title', 'Notarizer') | Notarizer</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="/img/Square Logo.png">
+
     {{-- TODO: Create Chrome extension screenshot tool, which uploads to our service. --}}
 
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
