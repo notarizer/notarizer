@@ -7,7 +7,7 @@
     <div class="flex flex-col sm:flex-row my-16">
         <div class="sm:w-1/2 sm:pr-5 sm:text-right mb-4 sm:mb-0">
             <h2 class="font-heading text-4xl">Save the Date</h2>
-            <p>Notarizer is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time. For example, Notarizer can be used to verify your school paper was complete before the deadline. <a href="#todo">See an example</a>!</p>
+            <p>Notarizer is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time. For example, Notarizer can be used to verify your school paper was complete before the deadline. <a href="{{ route('doc.show', ['doc' => 'f361264e016630f1c4c75f08fbddbca096be5a97d8e5f53133c054724411ba6d']) }}">See an example</a>!</p>
         </div>
         <div class="sm:w-1/2 sm:pl-5">
             @include('components/doc-upload', ['form' => 'upload', 'doc' => 'doc', 'submitText' => 'Upload a File'])
