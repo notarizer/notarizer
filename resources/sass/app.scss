@@ -65,3 +65,7 @@
 .error-box {
     @apply bg-red-light border border-red-dark text-red-darkest mb-3 p-2 shadow-inner;
 }
+
+a {
+    @apply text-primary;
+}
