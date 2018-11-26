@@ -258,7 +258,7 @@
         </div>
         <div class="sm:w-1/2 p-4">
             <h3 class="font-heading text-2xl text-center mb-2">Trustworthy by Design</h3>
-            <p>Our service is designed to be trusted by auditing by many third parties. We have <a href="{{ route('doc.index') }}">a public list</a> of all files uploaded to our service, so you can audit it yourself. <br><em>Coming soon!</em> Advanced mode which removes the file upload, thereby increasing trust.</p>
+            <p>Our service is designed to be trusted by auditing by many third parties. We have <a href="{{ route('doc.index') }}">a public list</a> of all files uploaded to our service, so you can audit it yourself.</p>
         </div>
     </div>
 @endsection
