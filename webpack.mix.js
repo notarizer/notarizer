@@ -27,7 +27,6 @@ if (mix.inProduction()) {
     mix.webpackConfig({
         plugins: [
             new PurgecssPlugin({
-
                 // Specify the locations of any files you want to scan for class names.
                 paths: glob.sync([
                     path.join(__dirname, "resources/views/**/*.blade.php"),
