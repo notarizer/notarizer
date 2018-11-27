@@ -1,6 +1,4 @@
-// import forge from 'node-forge';
 import sha256, { Hash, HMAC } from "fast-sha256";
-
 
 onmessage = function(e) {
 
@@ -22,10 +20,24 @@ onmessage = function(e) {
         });
     }
 
-    let result = Buffer.from(hasher.digest()).toString('hex');
+    let result = array2hex(hasher.digest());
 
     postMessage({
         status: 'done',
         result: result
     });
 };
+
+let array2hex = function (array) {
+    let hexArr = [];
+
+    for (let item of array) {
+        const hex = item.toString(16);
+
+        const paddedHex = ('00' + hex).slice(-2);
+
+        hexArr.push(paddedHex);
+    }
+
+    return hexArr.join('');
+}
