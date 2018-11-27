@@ -26,11 +26,7 @@ require('./bootstrap');
         if (docElement.files.length === 0)
             return;
 
-        form.querySelector('.js-errors').classList.add('hidden');
-        form.querySelector('.js-upload-status').innerHTML = 'Your file is processing...';
-        form.querySelector('.js-upload-status').classList.add('cursor-not-allowed');
-        preventPageChange(true);
-        docElement.disabled = true;
+        setButtonStatus(docElement, form, true, false);
         
         // Create a new worker which will be in charge of parsing the uploaded file
         let worker = new Worker('/js/worker.js');
@@ -42,7 +38,7 @@ require('./bootstrap');
             if (e.data.status === 'progress') {
                 form.querySelector('.js-upload-status').style.background = 'linear-gradient(to right, #dd2b41 ' + e.data.progress + '%, #e8b7bd ' + (e.data.progress + 1) + '%)';
             } else if (e.data.status === 'done') {
-                preventPageChange(false);
+                setButtonStatus(docElement, form, false, false);
                 postDoc(form, uploadedFile.name, e.data.result, uploadedFile.size);
             }
         };
@@ -50,11 +46,7 @@ require('./bootstrap');
         // If something goes wrong, tell the user!
         worker.onerror = worker.onmessageerror = function(e) {
             console.error(e);
-            form.querySelector('.js-errors').classList.remove('hidden');
-            form.querySelector('.js-errors').innerHTML = 'Whoops! Something went wrong: ' + e;
-            form.querySelector('.js-upload-status').classList.remove('cursor-not-allowed');
-            docElement.disabled = false;
-            preventPageChange(false);
+            setButtonStatus(docElement, form, false, true);
         };
 
         // Tell the worker to start parsing the uploaded file
@@ -67,6 +59,30 @@ require('./bootstrap');
         } else {
             window.onbeforeunload = null;
         }
+    }
+
+    let originalText = '';
+
+    let setButtonStatus = function (docElement, form, disabled, failed) {
+        if (disabled) {
+            originalText = form.querySelector('.js-upload-status').innerHTML;
+
+            form.querySelector('.js-errors').classList.add('hidden');
+            form.querySelector('.js-upload-status').innerHTML = 'Your file is processing...';
+            form.querySelector('.js-upload-status').classList.add('cursor-not-allowed');
+        } else {
+            if (failed) {
+                form.querySelector('.js-errors').classList.remove('hidden');
+                form.querySelector('.js-errors').innerHTML = 'Whoops! Something went wrong. Try again, and if the issue persists. Please <a class="text-white" href="/contact">Contact support</a>.'; // TODO: Remove absolute URL reference.
+            }
+
+            form.querySelector('.js-upload-status').classList.remove('cursor-not-allowed');
+            form.querySelector('.js-upload-status').innerHTML = originalText;
+            form.querySelector('.js-upload-status').style.background = '';
+        }
+
+        docElement.disabled = disabled;
+        preventPageChange(disabled);
     }
 
     // Post the document to the server
