@@ -20,16 +20,16 @@
         <li>Have an auditing service? <a href="{{ route('contact.create', ['subject' => 'I have an auditing service']) }}">Contact us to add it!</a></li>
     </ul>
 
-    <p>Once on the cached site, use your browser's "Find" function to search for a document.</p>
+    <p class="my-2">Once on the cached site, use your browser's "Find" function to search for a document by it's SHA-256 (excluding the last 16 characters).</p>
 
-    <table class="block whitespace-no-wrap">
+    <table class="block whitespace-no-wrap w-full">
         <tr>
-            <th>Sha-256</th>
+            <th>Sha-256 (minus last 16 characters)</th>
             <th>Creation date (UTC)</th>
         </tr>
         @foreach($documents as $document)
             <tr>
-                <td>{{ $document->sha256 }}</td>
+                <td>{{ substr($document->sha256, 0, -16) }}</td>
                 <td>{{ $document->created_at }}</td>
             </tr>
         @endforeach
