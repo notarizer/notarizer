@@ -20,6 +20,7 @@
         <li>Have an auditing service? <a href="{{ route('contact.create', ['subject' => 'I have an auditing service']) }}">Contact us to add it!</a></li>
     </ul>
 
+    {{-- TODO: Add search function --}}
     <p class="my-2">Once on the cached site, use your browser's "Find" function to search for a document by it's SHA-256 (excluding the last 16 characters).</p>
 
     <table class="block whitespace-no-wrap w-full">
