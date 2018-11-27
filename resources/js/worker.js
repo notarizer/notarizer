@@ -31,8 +31,8 @@ onmessage = function(e) {
 let array2hex = function (array) {
     let hexArr = [];
 
-    for (let item of array) {
-        const hex = item.toString(16);
+    for (let i = 0; i < array.length; i++) {
+        const hex = array[i].toString(16);
 
         const paddedHex = ('00' + hex).slice(-2);
 
