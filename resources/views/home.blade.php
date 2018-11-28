@@ -6,7 +6,7 @@
 
     <div class="flex flex-col sm:flex-row my-16">
         <div class="sm:w-1/2 sm:pr-5 sm:text-right mb-4 sm:mb-0">
-            <h2 class="font-heading text-4xl">Save the Date</h2>
+            <h1>Save the Date</h1>
             <p>Notarizer is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time. For example, Notarizer can be used to verify your school paper was complete before the deadline. <a href="{{ route('doc.show', ['doc' => 'f361264e016630f1c4c75f08fbddbca096be5a97d8e5f53133c054724411ba6d']) }}">See an example</a>!</p>
         </div>
         <div class="sm:w-1/2 sm:pl-5">
@@ -81,7 +81,7 @@
             </svg>
         </div>
         <div class="sm:w-1/2 p-4">
-            <h3 class="font-heading text-2xl text-center mb-2">All Sizes Welcome</h3>
+            <h2 class="text-center mb-2">All Sizes Welcome</h2>
             <p>There is no hard size limit on uploaded files, and since the files don't ever leave your device, you don't have to deal with bandwidth limits or email attachment size limits. No more waiting on slow uploads.</p>
         </div>
     </div>
@@ -126,7 +126,7 @@
             </svg>
         </div>
         <div class="sm:w-1/2 p-4">
-            <h3 class="font-heading text-2xl text-center mb-2">Keep Documents Private</h3>
+            <h2 class="text-center mb-2">Keep Documents Private</h2>
             <p>Have peace of mind knowing your secrets are safe because they never leave your device. The only data uploaded to our service is the file name, file size, and the SHA-256 hash of the file.</p>
         </div>
     </div>
@@ -257,7 +257,7 @@
             </svg>
         </div>
         <div class="sm:w-1/2 p-4">
-            <h3 class="font-heading text-2xl text-center mb-2">Trustworthy by Design</h3>
+            <h2 class="text-center mb-2">Trustworthy by Design</h2>
             <p>Our service is designed to be trusted by auditing by many third parties. We have <a href="{{ route('doc.index') }}">a public list</a> of all files uploaded to our service, so you can audit it yourself.</p>
         </div>
     </div>

@@ -69,3 +69,15 @@
 a {
     @apply text-primary;
 }
+
+h1 {
+    @apply font-heading text-4xl font-normal;
+}
+
+h2 {
+    @apply font-heading font-normal;
+}
+
+h3, h4, h5, h5 {
+    @apply font-heading;
+}
