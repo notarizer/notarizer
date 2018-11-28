@@ -11,6 +11,6 @@
 |
 */
 
-Route::name('api.')->namespace('Api')->group(function() {
+Route::group(['name' => 'api.', 'namespace' => 'Api', 'prefix' => 'v1'], function() {
     Route::resource('doc', 'DocumentController')->only(['index', 'store', 'show']);
 });
