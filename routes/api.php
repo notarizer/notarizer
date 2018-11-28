@@ -1,7 +1,5 @@
 <?php
 
-//use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,3 +11,6 @@
 |
 */
 
+Route::name('api.')->namespace('Api')->group(function() {
+    Route::resource('doc', 'DocumentController')->only(['index', 'store', 'show']);
+});

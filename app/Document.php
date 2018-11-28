@@ -11,6 +11,13 @@ class Document extends Model
     protected $guarded = [];
 
     /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = ['id', 'updated_at'];
+
+    /**
      * Get the route key for the model.
      *
      * @return string
