@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Document;
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateDocumentRequest;
 
 class DocumentController extends Controller
 {
@@ -30,18 +31,13 @@ class DocumentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Requests\CreateDocumentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateDocumentRequest $request)
     {
-        $data = $request->validate([
-            'name'   => 'required|string|max:255',
-            'sha256' => 'required|string|size:64|alpha_num',
-            'size'   => 'required|integer|min:0|max:' . PHP_INT_MAX,
-            'compare_to' => 'string|size:64|alpha_num'
-        ]);
-
+        $data = $request->validated();
+        
         if (! empty($data['compare_to'])) {
             $request->session()->flash('confirmation', $data['compare_to'] == $data['sha256']);
 
