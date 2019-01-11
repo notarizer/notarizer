@@ -31,7 +31,7 @@
             <textarea class="border border-grey-dark rounded w-full p-2 mt-2 h-24" type="text" name="message" placeholder="Message"></textarea>
         </div>
 
-        <input class="rounded bg-primary py-2 px-4 text-white tracking-wide cursor-pointer" type="submit" value="Contact Us" />
+        <input class="rounded bg-primary py-2 px-4 text-white tracking-wide cursor-pointer" type="submit" value="Send" />
 
         <input type="hidden" name="after" value="{{ url()->route('contact.thanks') }}">
     </form>
