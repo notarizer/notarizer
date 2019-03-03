@@ -16,19 +16,10 @@ class TimezoneController extends Controller
     {
         $timezone = $request->input('timezone');
 
-        $valid = false;
-
         if (in_array($timezone, timezone_identifiers_list())) {
             session(['timezone' => $timezone]);
-
-            $valid = true;
         }
 
-        if (! $request->expectsJson())
-            return redirect()->back();
-
-        if ($valid) return response('Timezone updated');
-
-        return response('Invalid timezone', 403);
+        return redirect()->back();
     }
 }
