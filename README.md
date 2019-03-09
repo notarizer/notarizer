@@ -1,4 +1,4 @@
-Notarizer [![Build Status](https://travis-ci.com/rockhopper72/notarizer.svg?token=qHEPSLtbmsxngUhJy7x8&branch=master)](https://travis-ci.com/rockhopper72/notarizer)
+Notarizer [![Build Status](https://travis-ci.com/notarizer/notarizer.svg?token=qHEPSLtbmsxngUhJy7x8&branch=master)](https://travis-ci.com/notarizer/notarizer)
 ======
 
 **Notarizer** is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time.
@@ -13,7 +13,7 @@ This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
 
 1. Clone the repo:
     ```
-    git clone https://github.com/rockhopper72/notarizer.git
+    git clone https://github.com/notarizer/notarizer.git
 
     cd notarizer
     ```
@@ -55,7 +55,7 @@ This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
 ## Contributors
 
 ### Contributors on GitHub
-* [Contributors](https://github.com/rockhopper72/notarizer/graphs/contributors)
+* [Contributors](https://github.com/notarizer/notarizer/graphs/contributors)
 
 ### Third party libraries
 * See [package.json](package.json)
