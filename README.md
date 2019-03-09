@@ -47,6 +47,11 @@ This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
     composer test
     ```
 
+# TODO
+- [ ] Add an API
+- [ ] Become popular
+- [ ] Re-add a contact form
+
 ## Contributors
 
 ### Contributors on GitHub
