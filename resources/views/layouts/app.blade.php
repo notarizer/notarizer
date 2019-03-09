@@ -35,6 +35,14 @@
             </div>
         @endif
 
+        @if(session()->has('payment_error'))
+            <div class="absolute pin-x pin-t bg-red-lighter px-8 py-4 border border-red-darkest m-2 shadow flex">
+                <p class="text-red-darkest flex-grow">{{ session('payment_error') }} If this issue persists, <a
+                            href="{{ route('contact.create') }}" class="text-red-darkest">Contact us</a>!</p>
+                <span><button onclick="this.parentElement.parentElement.classList.add('invisible')">&times;</button></span>
+            </div>
+        @endif
+
         <div class="mx-4">
             @yield('content')
         </div>

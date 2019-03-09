@@ -43,7 +43,7 @@ class DocumentController extends Controller
         ]);
 
         if (! empty($data['compare_to'])) {
-            $request->session()->flash('confirmation', $data['compare_to'] == $data['sha256']);
+            $request->session()->flash('confirmation', ($data['compare_to'] === $data['sha256']));
 
             return redirect()
                 ->route('doc.show', $data['compare_to']);
