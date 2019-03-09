@@ -12,7 +12,7 @@ See the **[Live Project](https://notarizer.app)**.
 This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
 
 1. Clone the repo:
-    ```sh
+    ```
     git clone https://github.com/rockhopper72/notarizer.git
 
     cd notarizer
@@ -22,7 +22,7 @@ This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
     cp .env.example .env # You must update some values in .env
     ```
 3. Install composer dependencies:
-    ```sh
+    ```
     composer self-update && composer install
     ```
 4. Generate PHP artisan keys:
