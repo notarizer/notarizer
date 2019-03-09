@@ -11,8 +11,6 @@ class DocumentTest extends TestCase
     /** @var Document */
     private $document;
 
-    // TODO: It can convert to human file size (maybe make separate class and test for that)
-
     public function setUp()
     {
         parent::setUp();
@@ -61,5 +59,32 @@ class DocumentTest extends TestCase
     public function it_knows_its_path()
     {
         $this->assertStringEndsWith('/doc/aFlP1k1CpAQZUKjsTI0qEHTDsPc8wHlbNkuwr4YdoPImuyFy9tXwWVgkPUPF5igN', $this->document->path());
+    }
+
+    /**
+     * @test
+     * @dataProvider fileSizeProvider
+     */
+    public function it_can_convert_to_human_readable_file_size($size, $humanSize)
+    {
+        $doc = factory(Document::class)->make([ 'size' => $size ]);
+
+        $this->assertEquals($humanSize, $doc->humanFileSize());
+    }
+
+    public function fileSizeProvider()
+    {
+        return [
+            [100, '100 B'],
+            [300, '300 B'],
+            [1000, '1.00 kB'],
+            [1000000, '1.00 MB'],
+            [1000000000, '1.00 GB'],
+            [1000000000000, '1.00 TB'],
+            [1000000000000000, '1.00 PB'],
+            [1000000000000000000, '1.00 EB'],
+            [1000000000000000000000, '1.00 ZB'],
+            [1000000000000000000000000, '1.00 YB'],
+        ];
     }
 }
