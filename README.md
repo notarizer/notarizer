@@ -3,7 +3,7 @@ Notarizer [![Build Status](https://travis-ci.com/rockhopper72/notarizer.svg?toke
 
 **Notarizer** is an easy and secure virtual timestamping service intended to verify that a file existed at a certain time.
 
-This projects does **NOT** use a Blockchain. 
+This project does **NOT** use a Blockchain. 
 
 See the **[Live Project](https://notarizer.app)**.
 
@@ -63,6 +63,6 @@ This projects makes use of [Laravel Valet](https://laravel.com/docs/valet).
 
 #### Steven Kemp (@rockhopper72)
 * Homepage: [Kemp.app](https://kemp.app/contact)
-* e-mail: [steven@notarizer.app](mailto:steven@notarizer.app)
+* Email: [steven@notarizer.app](mailto:steven@notarizer.app)
 * Other: [notarizer.app/contact](https://notarizer.app/contact)
 * [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/rockhopper72)
