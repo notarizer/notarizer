@@ -14,6 +14,7 @@ class PaymentTest extends TestCase
     // It shows whats wrong when something happens
     // It requires valid inputs
     // It shows a message and redirects on success
+    use RefreshDatabase;
 
     /** @test */
     public function it_shows_the_payment_page()

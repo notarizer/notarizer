@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TimezoneTest extends TestCase
 {
+    use RefreshDatabase;
 
     /** @test */
     public function it_sets_the_timezone()
