@@ -42,7 +42,7 @@ class DocumentTest extends TestCase
             'size' => '1000'
         ]);
 
-        $response->assertLocation('/payment?for=AgSFVxSoXkuVppwDTf5YQr0cid84IEvWxC762cGeKsIOlppCuCOjle8dugpLNARw');
+        $response->assertLocation('/doc/AgSFVxSoXkuVppwDTf5YQr0cid84IEvWxC762cGeKsIOlppCuCOjle8dugpLNARw');
 
         $this->assertDatabaseHas('documents', [
             'name' => 'Test Doc.xml',

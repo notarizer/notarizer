@@ -56,7 +56,7 @@ class DocumentController extends Controller
 
         $request->session()->push('owners', $data['sha256']);
 
-        return redirect()->route('payments.create', ['for' => $data['sha256']]);
+        return redirect()->route('doc.show', ['doc' => $data['sha256']]);
     }
 
     /**
