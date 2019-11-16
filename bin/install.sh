@@ -1,8 +1,13 @@
 #!/bin/sh
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 # Output running commands and fail on non-zero
 set -e
 set -x
+
+# Move out of the bin/ directory
+cd $DIR/..
 
 echo "Installing the application from default upstream"
 
