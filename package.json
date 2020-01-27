@@ -15,7 +15,7 @@
         "cross-env": "^5.1",
         "crypto-js": "3.1.9-1",
         "glob-all": "^3.1.0",
-        "laravel-mix": "^4.0.16",
+        "laravel-mix": "^5.0.1",
         "laravel-mix-tailwind": "^0.1.0",
         "purgecss-webpack-plugin": "^1.4.0",
         "resolve-url-loader": "2.3.1",
